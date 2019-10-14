@@ -171,30 +171,6 @@ void CreateObjects()
 		30.0f, 0.0f, 30.0f,		30.0f, 30.0f,	0.0f, -1.0f, 0.0f
 	};
 
-	unsigned int vegetacionIndices[] = {
-		0, 1, 2,
-		0, 2, 3,
-		4,5,6,
-		4,6,7
-	};
-
-	GLfloat vegetacionVertices[] = {
-		-0.5f, -0.5f, 0.0f,		0.0f, 0.0f,		0.0f, 0.0f, 0.0f,
-		0.5f, -0.5f, 0.0f,		1.0f, 0.0f,		0.0f, 0.0f, 0.0f,
-		0.5f, 0.5f, 0.0f,		1.0f, 1.0f,		0.0f, 0.0f, 0.0f,
-		-0.5f, 0.5f, 0.0f,		0.0f, 1.0f,		0.0f, 0.0f, 0.0f,
-
-		0.0f, -0.5f, -0.5f,		0.0f, 0.0f,		0.0f, 0.0f, 0.0f,
-		0.0f, -0.5f, 0.5f,		1.0f, 0.0f,		0.0f, 0.0f, 0.0f,
-		0.0f, 0.5f, 0.5f,		1.0f, 1.0f,		0.0f, 0.0f, 0.0f,
-		0.0f, 0.5f, -0.5f,		0.0f, 1.0f,		0.0f, 0.0f, 0.0f,
-
-
-	};
-
-
-	calcAverageNormals(indices, 12, vertices, 32, 8, 5);
-
 	Mesh *obj1 = new Mesh();
 	obj1->CreateMesh(vertices, indices, 32, 12);
 	meshList.push_back(obj1);
@@ -207,11 +183,6 @@ void CreateObjects()
 	obj3->CreateMesh(floorVertices, floorIndices, 32, 6);
 	meshList.push_back(obj3);
 
-	calcAverageNormals(vegetacionIndices, 12, vegetacionVertices, 64, 8, 5);
-
-	Mesh *obj4 = new Mesh();
-	obj4->CreateMesh(vegetacionVertices, vegetacionIndices, 64, 12);
-	meshList.push_back(obj4);
 
 }
 
@@ -223,86 +194,9 @@ void CreateShaders()
 	shaderList.push_back(*shader1);
 }
 
-//bool animacion = false;
 
-//NEW// Keyframes
-//float posYbase = -2.0;
-//float posXbase = -7.5;
-//float posZbase = -29.0;
-//float	movbase_y = 0.0f;
 
 #define MAX_FRAMES 9
-//int i_max_steps = 90;
-//int i_curr_steps = 5;
-//typedef struct _frame
-//{
-//	//Variables para GUARDAR Key Frames
-//	float movbase_y;		//Variable para PosicionY
-//	float movbase_yInc;		//Variable para IncrementoY
-//}FRAME;
-
-//FRAME KeyFrame[MAX_FRAMES];
-//int FrameIndex = 5;			//introducir datos
-//bool play = false;
-//int playIndex = 0;
-//
-//void saveFrame(void)
-//{
-//
-//	printf("frameindex %d\n", FrameIndex);
-//
-//	KeyFrame[FrameIndex].movbase_y = movbase_y;
-//
-//	FrameIndex++;
-//}
-//
-//void resetElements(void)
-//{
-//	movbase_y = KeyFrame[0].movbase_y;
-//}
-//
-//void interpolation(void)
-//{
-//	KeyFrame[playIndex].movbase_yInc = (KeyFrame[playIndex + 1].movbase_y - KeyFrame[playIndex].movbase_y) / i_max_steps;
-//
-//}
-//
-//
-//void animate(void)
-//{
-	//Movimiento del objeto
-//	if (play)
-//	{
-//		if (i_curr_steps >= i_max_steps) //end of animation between frames?
-//		{
-//			playIndex++;
-//			printf("playindex : %d\n", playIndex);
-//			if (playIndex > FrameIndex - 2)	//end of total animation?
-//			{
-//				printf("Frame index= %d\n", FrameIndex);
-//				printf("termina anim\n");
-//				playIndex = 0;
-//				play = false;
-//			}
-//			else //Next frame interpolations
-//			{
-//				//printf("entro aquí\n");
-//				i_curr_steps = 0; //Reset counter
-//				//Interpolation
-//				interpolation();
-//			}
-//		}
-//		else
-//		{
-//			//printf("se quedó aqui\n");
-//			//printf("max steps: %f", i_max_steps);
-//			//Draw animation
-//			movbase_y += KeyFrame[playIndex].movbase_yInc;
-//			i_curr_steps++;
-//		}
-//
-//	}
-//}
 
 int main()
 {
