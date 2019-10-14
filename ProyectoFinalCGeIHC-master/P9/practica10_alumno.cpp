@@ -350,106 +350,16 @@ int main()
 	Material_opaco = Material(0.3f, 4);
 
 	//LUMINARIA
-	street_Lamp = Model();
-	street_Lamp.LoadModel("Models/StreetLamp.obj");
-	RoadsFair = Model();
-	RoadsFair.LoadModel("Models/RoadsFair.obj");
+	
 	stone = Model();
 	stone.LoadModel("Models/CobbleStones2.obj");
 
-	//Vegetacion
-	tree = Model();
-	tree.LoadModel("Models/tree4a_lod1.obj");
-
-	//Carretaera
-	wall = Model();
-	wall.LoadModel("Models/wall.obj");
+	
 	// cuarto
 	cuarto = Model();
 	cuarto.LoadModel("Models/cuarto.obj");
-	//noria
-	BaseNoria = Model();
-	BaseNoria.LoadModel("Models/base_noria.obj");
-	RuedaNoria = Model();
-	RuedaNoria.LoadModel("Models/rueda.obj");
-	CabinaNoria = Model();
-	CabinaNoria.LoadModel("Models/cabine.obj");
-
-	//Kilahue
-	Kilahuea = Model();
-	Kilahuea.LoadModel("Models/base.obj");
-	base_kilahuea = Model();
-	base_kilahuea.LoadModel("Models/cabina.obj ");
-
-	//Carrito de globos
-	Globos = Model();
-	Globos.LoadModel("Models/balloon.obj");
-
-	//carrito de hotdogs
-	HotDog = Model();
-	HotDog.LoadModel("Models/hotdog.obj");
-
-	//carrito de algodon de azucar
-	Cotton = Model();
-	Cotton.LoadModel("Models/CottonCandy.obj");
-
-	//Puesto de elotes
-	Corn = Model();
-	Corn.LoadModel("Models/elotes.obj");
-
-	//Maquina de refrescos
-	Coke = Model();
-	Coke.LoadModel("Models/coke.obj");
-	Can = Model();
-	Can.LoadModel("Models/lata.obj");
-
-	//arbol
-	BaseTree = Model();
-	BaseTree.LoadModel("Models/basetree.obj");
-	Hojas = Model();
-	Hojas.LoadModel("Models/hojas.obj");
-
-	//Bath
-	Bath = Model();
-	Bath.LoadModel("Models/bathroom.obj");
-
-	//Camion pan de feria
-	Pan = Model();
-	Pan.LoadModel("Models/truck.obj");
-
-	//Mesa picnic
-	Mesa = Model();
-	Mesa.LoadModel("Models/mesa.obj");
-
-	//globo
-	Globo_A = Model();
-	Globo_A.LoadModel("Models/globo_azul.obj");
-	Globo_B = Model();
-	Globo_B.LoadModel("Models/globo_amarillo.obj");
-
-	Duck = Model();
-	Duck.LoadModel("Models/10602_Rubber_Duck_v1_L3.obj");
-
-	//Parque
-	Park = Model();
-	Park.LoadModel("Models/park.obj");
-
-	//Helado
-	Ice_Cream = Model();
-	Ice_Cream.LoadModel("Models/helado.obj");
-
-	//Palomitas chidas
-	PopCorn = Model();
-	PopCorn.LoadModel("Models/Puesto_palomitas.obj");
 	
 
-	//Stand
-	Stand = Model();
-	Stand.LoadModel("Models/stand.obj");
-
-	//Dardo
-	Dardo = Model();
-	Dardo.LoadModel("Models/dart.obj");
 
 
 	//luz direccional, sólo 1 y siempre debe de existir
@@ -494,15 +404,7 @@ int main()
 	movOffset = 1.0f;
 	avanza = 1;
 
-	//KeyFrame[0].movbase_y = 0.0f;
 
-	//KeyFrame[1].movbase_y = 16.0f;
-
-	//KeyFrame[2].movbase_y = 12.0f;
-
-	//KeyFrame[3].movbase_y = 16.0f;
-
-	//KeyFrame[4].movbase_y = 0.0f;
 
 	//Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
@@ -558,112 +460,8 @@ int main()
 		}
 
 
-		/****************************************** LUCES SPOTLIGHT**********************************************/
-
-
-
-		spotLights[1] = SpotLight(1.0f, 1.0f, 1.0f, //vector de color
-			0.0f, 2.0f,
-			distancia_luz1, 24.0f, -30.0f, //posicion
-			0.0f, -15.0f, 0.0f, //direccion
-			1.0f, 0.0f, 0.0f,
-			12.0f); //Angulo de apertura
-		spotLightCount++;
-
-
-		spotLights[2] = SpotLight(1.0f, 1.0f, 1.0f, //vector de color
-			0.0f, 2.0f,
-			distancia_luz2, 24.0f, -30.0f, //posicion
-			0.0f, -15.0f, 0.0f, //direccion
-			1.0f, 0.0f, 0.0f,
-			12.0f); //Angulo de apertura
-		spotLightCount++;
-
-
-		spotLights[3] = SpotLight(1.0f, 1.0f, 1.0f, //vector de color
-			0.0f, 2.0f,
-			-2.0f, 0.0f, -1.0f, //posicion
-			0.0f, -15.0f, 0.0f, //direccion
-			1.0f, 0.0f, 0.0f,
-			12.0f); //Angulo de apertura
-		spotLightCount++;
-
-		/*******************************Luces POINTLIGHT*****************************************************/
-
-		pointLights[0] = PointLight(1.0f, 1.0f, 1.0f,
-			1.0f, 1.0f,
-			distanca_Luz1P, 0.90f, -23.0f, //estas son las coordenadas
-			0.1f, 0.1f, 0.1f);
-		pointLightCount++;
-
-
-		pointLights[1] = PointLight(1.0f, 1.0f, 1.0f,
-			1.0f, 1.0f,
-			distancia_Luz2P, 0.90f, -10.0f, //estas son las coordenadas
-			0.1f, 0.1f, 0.1f);
-		pointLightCount++;
-
-		pointLights[2] = PointLight(1.0f, 1.0f, 1.0f,
-			1.0f, 1.0f,
-			12.0f, 0.9f, -2.5f, //estas son las coordenadas
-			0.1f, 0.1f, 0.1f);
-		pointLightCount++;
-
-		//Luces de la entrada
-
-		if (luces_entrada == 1)
-		{
-			pointLights[3] = PointLight(0.0f, 0.0f, 0.0f,
-				1.0f, 1.0f,
-				-1.4, 0.9f, -1.0f, //estas son las coordenadas
-				0.1f, 0.1f, 0.1f);
-			pointLightCount++;
-
-			pointLights[4] = PointLight(0.0f, 0.0f, 0.0f,
-				1.0f, 1.0f,
-				2.9f, 0.9f, -1.0f, //estas son las coordenadas
-				0.1f, 0.1f, 0.1f);
-			pointLightCount++;
-
-		}
-
-		/********************************APAGAR LUCES SPOTLIGHT********************************/
-
-		if (apagarS1 == 1) {
-			distancia_luz1 = -50.0f;
-		}
-		else if (apagarS1 == 2)
-			distancia_luz1 = -8.0f;
-
-		if (apagarS2 == 1) {
-			distancia_luz2 = 50.0f;
-		}
-		else if (apagarS2 == 2)
-		{
-			distancia_luz2 = -1.5f;
-		}
-		/**************************************APAGAR LUCES POINTLIGHT*************************************************/
-
-		if (apagarP1 == 1) {
-			distanca_Luz1P = -80.0f;
-		} 
-		else if (apagarP1 == 2)
-		{
-			distanca_Luz1P = 9.5f;
-		}
-
-		if (apagarP2 == 1) {
-			distancia_Luz2P = -80.0f;
-		}
-		else if (apagarP2 == 2)
-		{
-			distancia_Luz2P = -1.5f;
-		}
-
-
-		//inputKeyframes(mainWindow.getsKeys());
-		//animate();
-		// Clear the window
+		
+		
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		///////////////////////////////////////
