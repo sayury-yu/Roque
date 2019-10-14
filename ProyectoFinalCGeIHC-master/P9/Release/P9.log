@@ -1,0 +1,161 @@
+﻿  Camera.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(105): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(120): warning C4244: '-=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(125): warning C4244: '+=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(137): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(138): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(139): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(141): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(142): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(143): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(168): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(169): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(170): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(184): warning C4244: '-=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(189): warning C4244: '+=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(201): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(202): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(203): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(205): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\camera.cpp(207): warning C4305: '=': truncamiento de 'double' a 'T'
+          with
+          [
+              T=float
+          ]
+  DirectionalLight.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\directionallight.cpp(18): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\directionallight.cpp(19): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\directionallight.cpp(21): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\directionallight.cpp(22): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+  Light.cpp
+  Material.cpp
+  Mesh_tn.cpp
+  Model.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(15): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'const std::string'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(15): warning C4474: "printf": se pasaron demasiados argumentos para la cadena de formato
+  c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(15): note: los marcadores de posición y sus parámetros esperan 1 argumentos variádicos, pero se proporcionaron 2
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(50): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(50): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\model.cpp(132): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string'
+  PointLight.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(28): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(29): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(30): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(32): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(33): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(34): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\pointlight.cpp(35): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
+  practica10_alumno.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(14): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\practica10_alumno.cpp(102): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\practica10_alumno.cpp(515): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\practica10_alumno.cpp(534): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\practica10_alumno.cpp(619): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Shader_light.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\shader_light.cpp(202): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\shader_light.cpp(201): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\shader_light.cpp(215): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\shader_light.cpp(214): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\shader_light.cpp(213): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
+  Skybox.cpp
+  SpotLight.cpp
+  Texture.cpp
+  Window.cpp
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(14): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(127): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(134): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(139): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(145): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(150): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(156): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(191): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(196): warning C4305: '+=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(207): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(212): warning C4305: '-=': truncamiento de 'double' a 'GLfloat'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(249): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(250): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(254): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(255): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(257): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(258): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Generando código
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.cpp(80): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
+  1063 of 1076 functions (98.8%) were compiled, the rest were copied from previous compilation.
+    96 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  P9.vcxproj -> C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\Release\P9.exe
