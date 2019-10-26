@@ -41,7 +41,7 @@ int Window::Initialise()
 	//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	mainWindow = glfwCreateWindow(width, height, "Proyecto Final muy chido :) ", NULL, NULL);
+	mainWindow = glfwCreateWindow(width, height, "Proyecto Final  :) ", NULL, NULL);
 
 	if (!mainWindow)
 	{
@@ -187,35 +187,35 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	/*************************Para la escala ***************************************/
 	if (key == GLFW_KEY_V && action == GLFW_PRESS)
 	{
-	
-		escx += 0.1;
+		 escx += 0.001;
+		//escx += 0.001;
 	}
 
 	if (key == GLFW_KEY_B && action == GLFW_PRESS)
 	{
-		escy += 0.1;
+		escy += 0.001;
 
 	}
 
 	if (key == GLFW_KEY_N && action == GLFW_PRESS)
 	{
-		escz += 0.1f;
+		escz += 0.001f;
 	}
 	if (key == GLFW_KEY_J && action == GLFW_PRESS)
 	{
 
-		escx -= 0.1;
+		escx -= 0.001;
 	}
 
 	if (key == GLFW_KEY_K && action == GLFW_PRESS)
 	{
-		escy -= 0.1;
+		escy -= 0.001;
 
 	}
 
 	if (key == GLFW_KEY_L && action == GLFW_PRESS)
 	{
-		escz -= 0.1f;
+		escz -= 0.001f;
 	}
 
 
