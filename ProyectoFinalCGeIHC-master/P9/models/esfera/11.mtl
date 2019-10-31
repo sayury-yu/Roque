@@ -22,8 +22,8 @@ newmtl 7
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\ilustracion-vector-fondo-textura-metal-verde_46250-108.jpg
-	map_Kd C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\ilustracion-vector-fondo-textura-metal-verde_46250-108.jpg
+	map_Ka C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\P9\models\esfera\ilustracion-vector-fondo-textura-metal-verde_46250-108.jpg
+	map_Kd C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\P9\models\esfera\ilustracion-vector-fondo-textura-metal-verde_46250-108.jpg
 
 newmtl wire_214228153
 	Ns 32
@@ -46,5 +46,5 @@ newmtl 11
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\fondo-textura-metal-rojo_46250-347.jpg
-	map_Kd C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\fondo-textura-metal-rojo_46250-347.jpg
+	map_Ka fondo-textura-metal-rojo_46250-347.jpg
+	map_Kd fondo-textura-metal-rojo_46250-347.jpg

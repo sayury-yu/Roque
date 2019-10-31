@@ -1,11 +1,11 @@
 ﻿  Proyecto.cpp
 c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
 c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(14): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(124): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(388): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(407): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(128): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(402): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(421): warning C4305: '+=': truncamiento de 'double' a 'float'
   Generando código
-  0 of 1121 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  1 of 1129 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada

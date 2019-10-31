@@ -22,8 +22,8 @@ newmtl 1
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka  C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\P9\models\esfera\68635966-la-tecnología-de-fondo-azul-del-metal-con-el-extracto-textura-pulido-cepillado-plata-acero-aluminio-pa.jpg
-	map_Kd   C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\P9\models\esfera\68635966-la-tecnología-de-fondo-azul-del-metal-con-el-extracto-textura-pulido-cepillado-plata-acero-aluminio-pa.jpg
+	map_Ka  68635966-la-tecnología-de-fondo-azul-del-metal-con-el-extracto-textura-pulido-cepillado-plata-acero-aluminio-pa.jpg
+	map_Kd  68635966-la-tecnología-de-fondo-azul-del-metal-con-el-extracto-textura-pulido-cepillado-plata-acero-aluminio-pa.jpg
 
 newmtl wire_214228153
 	Ns 32
@@ -46,5 +46,5 @@ newmtl 8
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\fondo-textura-placa-metal-plateado-abstracto_34679-79.jpg
-	map_Kd C:\Users\sayun\Documents\CompuGrafica\experimento\navidad\fondo-textura-placa-metal-plateado-abstracto_34679-79.jpg
+	map_Ka fondo-textura-placa-metal-plateado-abstracto_34679-79.jpg
+	map_Kd fondo-textura-placa-metal-plateado-abstracto_34679-79.jpg

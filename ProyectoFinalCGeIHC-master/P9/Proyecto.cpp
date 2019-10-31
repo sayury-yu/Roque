@@ -59,7 +59,9 @@ Model casa;
 Model Calceta1;
 Model Calceta2;
 Model Calceta3;
+Model caballito;
 Model pino;
+Model pinata;
 Model Regalo;
 Model Regalo1;
 Model Regalo2;
@@ -68,12 +70,14 @@ Model Regalo4;
 Model Regalo5;
 Model Regalo6;
 Model Regalo7;
+Model Rieles;
 Model estrella;
 Model locomotora;
 Model baston;
 Model chimenea;
 Model Corona;
 Model Esfera;
+Model Esfera1;
 Model Pelota;
 Model Dino;
 Model Spiderman;
@@ -277,6 +281,9 @@ int main()
 	// pino
 	pino = Model();
 	pino.LoadModel("Models/pino/pino1.obj");
+	// pinata
+	pinata = Model();
+	pinata.LoadModel("Models/pinata/pinata.obj");
 	// Calceta
 	Calceta1= Model();
 	Calceta1.LoadModel("Models/calceta/calceta1.obj");
@@ -314,18 +321,25 @@ int main()
 	Trineo = Model();
 	Trineo.LoadModel("Models/trineo/trineo.obj");
 	// Baston
-	
 	baston = Model();
 	baston.LoadModel("Models/baston/baston1.obj");
+	//Caballo
+	caballito = Model();
+	caballito.LoadModel("Models/caballito/caballito.obj");
 	// Pelota
 	Pelota = Model();
 	Pelota.LoadModel("Models/pelota/pelota.obj");
+	// Rieles
+	Rieles = Model();
+	Rieles.LoadModel("Models/rieles/Rails_OBJ.obj");
 	////Locomotora
 	locomotora = Model();
-	locomotora.LoadModel("Models/tren/9eb5a63983f942b5b3ca4538af920136.fbx");
-	//// Esfera
+	locomotora.LoadModel("Models/tren/loco.obj");
+	//// Esfera    /***si carga color**/
 	Esfera = Model();
-	Esfera.LoadModel("Models/esfera/esfera2.obj");
+	Esfera.LoadModel("Models/esfera/esfera5.obj"); /*****probar     espe.obj, sayury.obj*/
+	Esfera1 = Model(); /****prueba***/
+	Esfera1.LoadModel("Models/esfera/sayury.obj");
 	//Estrella
 	estrella = Model();
 	estrella.LoadModel("Models/estrella/estrella.obj");
@@ -764,14 +778,64 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Calceta3.RenderModel();
+		/***TREN**/
+		//model = glm::mat4(1.0);              //  x       y      z   
+		//model = glm::translate(model, glm::vec3(posx,posy,posz));
+		//model = glm::scale(model, glm::vec3(escx, escy,escz));   /// cambiar la escala 
+		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		//locomotora.RenderModel();
+		//
 
-		/// Locomotora
+		/***TREN**/
+		//model = glm::mat4(1.0);              //  x       y      z   
+		//model = glm::translate(model, glm::vec3(posx,posy,posz));
+		//model = glm::scale(model, glm::vec3(escx, escy,escz));   /// cambiar la escala 
+		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		//caballito.RenderModel();
 		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(posx,posy,posz));
-		model = glm::scale(model, glm::vec3(14.100018f, 42.299881f, 2.300000f));   /// cambiar la escala 
+		model = glm::translate(model, glm::vec3(3.8999f, -2.0000f, -23.900055f));
+		model = glm::scale(model, glm::vec3(0.002000f,0.004000f,0.005000));   /// cambiar la escala 
+		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		//model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		locomotora.RenderModel();
+		caballito.RenderModel();
+
+		// Rieles de tren
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(14.800020f, -1.90000f, -19.500038f));
+		model = glm::scale(model, glm::vec3(0.000100f,0.000110f,0.000210f));   /// cambiar la escala 
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		//model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Rieles.RenderModel();
+
+
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(10.700005f,-1.9000f,-19.500038f));
+		model = glm::scale(model, glm::vec3(0.000242f, 0.000081f, 0.000213f));   /// cambiar la escala 
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		//model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Rieles.RenderModel();
+
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(7.799995f, -1.9000f,-22.200048f));
+		model = glm::scale(model, glm::vec3(0.000242f,0.000081f, 0.000213f));   /// cambiar la escala 
+		model = glm::rotate(model, 90 * toRadians, glm::vec3(.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Rieles.RenderModel();
+
+
+		
+
+	
 
 		/***************************DECORACIÓN DE ARBOL*****************************/
 		/// pino de navidad
@@ -781,7 +845,13 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		pino.RenderModel();
-
+		/// pino de navidad
+		//model = glm::mat4(1.0);              //  x       y      z   
+		//model = glm::translate(model, glm::vec3(posx,posy,posz));
+		//model = glm::scale(model, glm::vec3(escx, escy,escz));   /// cambiar la escala 
+		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		//pinata.RenderModel();
 		// Estrella de arbol
 		model = glm::mat4(1.0);              //  x       y      z   
 		model = glm::translate(model, glm::vec3(11.900009f,9.700001f,-25.300060f));
@@ -1037,6 +1107,13 @@ int main()
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Esfera.RenderModel();
 		
+
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(posx,posy,posz));
+		model = glm::scale(model, glm::vec3(escx,escy,escz));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		Esfera1.RenderModel();
 		
 
 		//Platilla
