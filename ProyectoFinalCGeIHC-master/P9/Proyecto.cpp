@@ -24,7 +24,7 @@
 #include "Skybox.h"
 #include"SpotLight.h"
 
-//para audio
+////para audio
 #include <iostream>
 #include <irrKlang.h>
 
@@ -61,6 +61,7 @@ Model Calceta2;
 Model Calceta3;
 Model caballito;
 Model pino;
+
 Model pinata;
 Model Regalo;
 Model Regalo1;
@@ -241,9 +242,9 @@ int main()
 
 	/*************************************SONIDO MP3 *****************************************/
 
-	ISound* ambiental = engine->play2D("Audio/navidad2.mp3", true);
+	/*ISound* ambiental = engine->play2D("Audio/navidad2.mp3", true);
 	if (ambiental)
-		ambiental->setVolume(0.5);
+		ambiental->setVolume(0.5);*/
 	/*ISound* track3D=engine->play3D("Audio/gritos.wav", vec3df(0,0,0),true,false,true);
 	if (track3D) {
 		track3D->setMinDistance(5.0f);
@@ -281,6 +282,7 @@ int main()
 	// pino
 	pino = Model();
 	pino.LoadModel("Models/pino/pino1.obj");
+	
 	// pinata
 	pinata = Model();
 	pinata.LoadModel("Models/pinata/pinata.obj");
@@ -845,13 +847,17 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		pino.RenderModel();
-		/// pino de navidad
-		//model = glm::mat4(1.0);              //  x       y      z   
-		//model = glm::translate(model, glm::vec3(posx,posy,posz));
-		//model = glm::scale(model, glm::vec3(escx, escy,escz));   /// cambiar la escala 
-		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		//pinata.RenderModel();
+		
+	
+
+		/// piñata 
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(10.300003f,4.899998f,-12.600012f));
+		model = glm::scale(model, glm::vec3(1.20000f,0.9000f,1.000f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		pinata.RenderModel();
+
 		// Estrella de arbol
 		model = glm::mat4(1.0);              //  x       y      z   
 		model = glm::translate(model, glm::vec3(11.900009f,9.700001f,-25.300060f));
