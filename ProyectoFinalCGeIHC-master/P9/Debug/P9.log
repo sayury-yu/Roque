@@ -1,7 +1,7 @@
 ﻿  Proyecto.cpp
 c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
 c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\window.h(14): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(129): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(404): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(423): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(132): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(419): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\sayun\desktop\proyecto final\proyectofinalcgeihc-master\p9\proyecto.cpp(438): warning C4305: '+=': truncamiento de 'double' a 'float'
   P9.vcxproj -> C:\Users\sayun\Desktop\PROYECTO FINAL\ProyectoFinalCGeIHC-master\Debug\P9.exe

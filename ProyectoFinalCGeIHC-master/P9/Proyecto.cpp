@@ -61,7 +61,10 @@ Model Calceta2;
 Model Calceta3;
 Model caballito;
 Model pino;
-
+Model nochebuena;
+Model pared;
+Model pared1;
+Model piso;
 Model pinata;
 Model Regalo;
 Model Regalo1;
@@ -278,11 +281,23 @@ int main()
 	casa = Model();
 	casa.LoadModel("Models/casa.obj");
 
+	//pared
+	pared = Model();
+	pared.LoadModel("Models/pared/pared.obj");
 
+	pared1 = Model();
+	pared1.LoadModel("Models/pared/pared1.obj");
 	// pino
 	pino = Model();
-	pino.LoadModel("Models/pino/pino1.obj");
-	
+	pino.LoadModel("Models/ArbolNavidad/arbolNav.obj");
+	// nocheBuena
+	nochebuena = Model();
+	nochebuena.LoadModel("Models/nochebuena/nochebuena.obj");
+	// piso
+	piso = Model();
+	piso.LoadModel("Models/piso/piso1.obj");
+
+
 	// pinata
 	pinata = Model();
 	pinata.LoadModel("Models/pinata/pinata.obj");
@@ -770,7 +785,7 @@ int main()
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Calceta2.RenderModel();
+		Calceta1.RenderModel();
 		//Calceta3
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(12.900013f, 1.80000f,-17.700031f));
@@ -779,7 +794,7 @@ int main()
 		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Calceta3.RenderModel();
+		Calceta1.RenderModel();
 		/***TREN**/
 		//model = glm::mat4(1.0);              //  x       y      z   
 		//model = glm::translate(model, glm::vec3(posx,posy,posz));
@@ -789,13 +804,7 @@ int main()
 		//locomotora.RenderModel();
 		//
 
-		/***TREN**/
-		//model = glm::mat4(1.0);              //  x       y      z   
-		//model = glm::translate(model, glm::vec3(posx,posy,posz));
-		//model = glm::scale(model, glm::vec3(escx, escy,escz));   /// cambiar la escala 
-		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		//caballito.RenderModel();
+		// caballito
 		model = glm::mat4(1.0);              //  x       y      z   
 		model = glm::translate(model, glm::vec3(3.8999f, -2.0000f, -23.900055f));
 		model = glm::scale(model, glm::vec3(0.002000f,0.004000f,0.005000));   /// cambiar la escala 
@@ -834,21 +843,67 @@ int main()
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		Rieles.RenderModel();
 
+		// piso 
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(6.999996f,-2.000f,-25.500061f));
+		model = glm::scale(model, glm::vec3(0.14200f,0.086000f,0.26400f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		piso.RenderModel();
+		// pared
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(9.199999f,-3.399999f,-31.900085f));
+		model = glm::scale(model, glm::vec3(0.03000f,0.034000f,0.00300f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		pared1.RenderModel();
 
-		
 
-	
+		// pared
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(16.000025f,-3.099999f,-17.400030f));
+		model = glm::scale(model, glm::vec3(0.029000f,0.033000f,0.063000f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		pared.RenderModel();
 
 		/***************************DECORACIÓN DE ARBOL*****************************/
 		/// pino de navidad
 		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.90009f, -3.299999f, -25.200060f));
-		model = glm::scale(model, glm::vec3(0.60000f, 0.60000f, 0.60000f));   /// cambiar la escala 
+		model = glm::translate(model, glm::vec3(15.900024f,-3.599999f,-31.400084f));
+		model = glm::scale(model, glm::vec3(0.13400f,0.11800f,0.110000f));   /// cambiar la escala 
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		pino.RenderModel();
+		/// noche buena
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(11.500008f,-2.0000f,-15.000021f));
+		model = glm::scale(model, glm::vec3(.258000f,0.223000f,0.21600f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		nochebuena.RenderModel();
 		
-	
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(11.800009f,-1.3000f,-13.900017f));
+		model = glm::scale(model, glm::vec3(0.22000f,0.18900f,0.18400f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		nochebuena.RenderModel();
+
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(11.400007,-2.000f,-18.000032f));
+		model = glm::scale(model, glm::vec3(0.27200f,0.226000f,0.22000f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		nochebuena.RenderModel();
+
+		model = glm::mat4(1.0);              //  x       y      z   
+		model = glm::translate(model, glm::vec3(3.89999f,-2.000f,-18.0000323f));
+		model = glm::scale(model, glm::vec3(0.212000f,0.16700f,0.171000f));   /// cambiar la escala 
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
+		nochebuena.RenderModel();
+
 
 		/// piñata 
 		model = glm::mat4(1.0);              //  x       y      z   
@@ -857,270 +912,6 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		pinata.RenderModel();
-
-		// Estrella de arbol
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.900009f,9.700001f,-25.300060f));
-		model = glm::scale(model, glm::vec3(0.022000f,0.012000f,0.01000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		estrella.RenderModel();
-		
-		// Espera1
-	
-		//model = glm::mat4(1.0);              //  x       y      z   
-		//model = glm::translate(model, glm::vec3(posx, posy, posz));
-		//model = glm::scale(model, glm::vec3(escx, escy, escz));   /// cambiar la escala 
-		//glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		//Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		//Esfera.RenderModel();
-
-		// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.600019f,5.799997,-24.700056f));
-		model = glm::scale(model, glm::vec3(0.0270000f,0.01700f,0.017000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.500011f,3.99999,-26.100061f));
-		model = glm::scale(model, glm::vec3(0.027000f,0.017000f,0.017000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.500011f,5.599997f,-26.100061f));
-		model = glm::scale(model, glm::vec3(0.027000f,0.017000f,0.017000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.700012f, 7.199996f,-25.100058f));
-		model = glm::scale(model, glm::vec3(0.027000f,0.017000f,0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.200010f,5.499997f,-23.600052f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(13.800016f,6.199996f,-23.600052f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.700020f,5.199997f,-23.600052f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(15.300022f,4.299998f,-23.600052f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.700012f,4.499998f,-23.400051f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.400011f,1.00000f,-21.800045f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(13.100014f,2.1000f,-21.800045f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.500019f,2.0000f,-21.800045f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(10.400003,2.2000f,-25.000057f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		//// Esfera 2
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(10.400003, 1.50000f, -24.000054f));
-		model = glm::scale(model, glm::vec3(0.027000f, 0.017000f, 0.01700f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		
-		Esfera.RenderModel();
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.700008, 2.00000f, -25.100058f));
-		model = glm::scale(model, glm::vec3(0.026000f, 0.012000f, 0.01200f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		Esfera.RenderModel();
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.700008, 2.00000f, -25.100058f));
-		model = glm::scale(model, glm::vec3(0.026000f, 0.012000f, 0.01200f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		/////
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.00006f,3.099999f,-22.500050f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.011000f, 0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.600019f,2.799999f,-23.200052f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.011000f, 0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.800013f,3.399999f,-22.800021f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.011000f, 0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(13.000013f,7.599995f,-24.100056f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.011000f, 0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(13.400015f,8.399996f,-24.500057f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel(); 
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(13.200014f,9.099998f,-24.500057f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.400011f,8.399996f,-24.500057f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(11.500008f,4.699998f,-24.500057f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(15.300022f,2.8000f,-22.800051f));
-		model = glm::scale(model, glm::vec3(0.020000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(15.400023f,-1.30000f,-21.400045f));
-		model = glm::scale(model, glm::vec3(0.019000f, 0.012000f, 0.012000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-
-	
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(10.200003f,3.299999f,-26.100063f));
-		model = glm::scale(model, glm::vec3(0.018000f,0.012000f,0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(9.299999f,-1.20000f,-22.200048f));
-		model = glm::scale(model, glm::vec3(0.018000f,0.012000f,0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(10.500004f,0.300000f,-22.600050f));
-		model = glm::scale(model, glm::vec3(0.01800f,0.012000f,0.0110000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(12.500011f, 0.50000f,-22.600050f));
-		model = glm::scale(model, glm::vec3(0.018000f,0.012000f,0.0110000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(15.400023f,-0.30000f,-24.500057f));
-		model = glm::scale(model, glm::vec3(0.018000f,0.012000f,0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.500019f,0.1000f,-22.300049f));
-		model = glm::scale(model, glm::vec3(0.018000f,0.012000f,0.0110000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		// Esfera 
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(14.500019f,1.90000f,-23.300053f));
-		model = glm::scale(model, glm::vec3(0.0180000,0.012000f,0.011000f));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera.RenderModel();
-		
-
-		model = glm::mat4(1.0);              //  x       y      z   
-		model = glm::translate(model, glm::vec3(posx,posy,posz));
-		model = glm::scale(model, glm::vec3(escx,escy,escz));   /// cambiar la escala 
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Material_brillante.UseMaterial(uniformSpecularIntensity, uniformShininess);
-		Esfera1.RenderModel();
-		
 
 		//Platilla
 		//model = glm::mat4(1.0);              //  x       y      z   
